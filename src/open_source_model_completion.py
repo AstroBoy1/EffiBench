@@ -58,7 +58,8 @@ if __name__ == "__main__":
     parser.add_argument('--model', '-m', type=str, default='codellama/CodeLlama-70b-Instruct-hf', help='Model to use for completion')
     args = parser.parse_args()
     model_name = args.model
-    with open("../data/dataset.json", "r") as f:
+    fn = "../data/dataset_with_difficulty_and_algorithm.json"
+    with open(fn, "r") as f:
         dataset = json.load(f)
 
     model = AutoModelForCausalLM.from_pretrained(

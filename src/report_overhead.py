@@ -48,7 +48,8 @@ def report_max_memory_usage(dat_file_path):
             max_memory_usage = max(max_memory_usage, mem_in_mb)
         return max_memory_usage
 
-model_list = ["gpt-3.5-turbo"]
+model_list = ["gpt-4o-mini"]
+#model_list = ["gpt-4o-mini-guide"]
 canonical_solution_directory = "../dat_results/canonical_solution"
 canonical_solution_memory_usage = {}
 canonical_solution_execution_time = {}
